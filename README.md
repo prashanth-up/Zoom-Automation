@@ -18,6 +18,7 @@ An Automation script to automatically join a scheduled zoom meeting at a specifi
 #### Make sure the Zoom settings are as follows
 ##### Set the Audio Settings as follows :
 <img src = "configurations/zoom_audio.png" width = "600">
+* It is not necessary to enable the "Automatically join audio by computer when joining a meeting."
 
 ##### Set the Video Settings as follows :
 <img src = "configurations/zoom_vid.png" width = "600">
