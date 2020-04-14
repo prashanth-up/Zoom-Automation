@@ -28,6 +28,7 @@ An Automation script to automatically join a scheduled zoom meeting at a specifi
   * First Path - "Path to where python is located"
   * Second Path - "Path to where the main.py is located"
 * Make sure the `joinING.png` is located in the same folder as `main.py` and `run.bat`
+* You need to make changes to the `joinIMG.png` according to your system or it might cause some problems.
 * Run the `run.bat` to run the batch file
   * Alternatively you can also run the `main.py` for the same result but `run.bat` is preferred
 * *Finally after the cmd is opened read the instructions thoroughly and proceed by entering your zoom meeting info*
