@@ -47,7 +47,7 @@ def zoomClass():
     x,y = pyautogui.locateCenterOnScreen('joinIMG.png')
     """
     # x,y = pyautogui.locateCenterOnScreen('joinIMG.png', confidence = 0.9)
-    # Uncomment ln 48 and comment ln 47 
+    # Uncomment ln 49 and comment ln 47 
     # if you get an 'TypeError: cannot unpack non-iterable NoneType object' error
     """
     pyautogui.click(x,y)
