@@ -55,7 +55,7 @@ def zoomClass():
     pyautogui.write(password)
     pyautogui.press('enter',interval = 10)
 
-    print("Session has started and will continue for %s minutes"%meet_time)
+    print("Session has started and will continue for %s minutes"%total_meet)
 
     print('Hold (Ctrl+c) to exit the program ')
 
