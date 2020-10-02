@@ -68,9 +68,8 @@ def zoomClass():
     time.sleep(total_meet) 
 
     # closing Zoom
-    pyautogui.hotkey('alt','f4')
+    os.system("TASKKILL /F /IM Zoom.exe")
     time.sleep(0.5)
-    pyautogui.hotkey('alt','f4')
 
 
 # Every day at whatever time the user has entered.
