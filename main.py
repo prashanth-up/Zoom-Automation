@@ -65,7 +65,7 @@ def zoomClass():
     print('Hold (Ctrl+c) to exit the program ')
 
     #Total time of zoom session
-    time.sleep(total_meet) 
+    time.sleep(total_meet * 60) 
 
     # closing Zoom
     os.system("TASKKILL /F /IM Zoom.exe")
