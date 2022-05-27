@@ -1,10 +1,14 @@
-# Made By Prashanth Umapathy
-# Specialises is Laziness
+
+
 
 # Libraries imported
 import pyautogui
 import schedule
 import time
+import os
+#import webbrowser as wb
+#url='https://www.google.com'
+#chrome_path="C:\\Program Files(x86)\\Google\\Chrome\\Application\\chrome.exe"
 
 # To be printed hashes
 hashes = "#" * 95
@@ -52,13 +56,15 @@ def zoomClass():
 
     time.sleep(10)
 
-    x, y = pyautogui.locateCenterOnScreen('joinIMG.png')
+    #cords = pyautogui.locateCenterOnScreen('joinIMG.png')
+    cords = pyautogui.locateCenterOnScreen('joinIMG.png', confidence = 0.9)
+    print(cords)
+
     """
-    # x,y = pyautogui.locateCenterOnScreen('joinIMG.png', confidence = 0.9)
     # Uncomment ln 49 and comment ln 47
     # if you get an 'TypeError: cannot unpack non-iterable NoneType object' error
     """
-    pyautogui.click(x, y)
+    pyautogui.click(cords)
 
     pyautogui.press('enter', interval=5)
     pyautogui.write(meet_id)
