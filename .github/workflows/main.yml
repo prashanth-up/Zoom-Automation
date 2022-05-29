@@ -1,0 +1,80 @@
+
+#name: learn-github-actions
+#on: [push]
+#jobs:
+ # check-bats-version:
+  #  runs-on: ubuntu-latest
+   # steps:
+    #  - uses: actions/checkout@v3
+     # - uses: actions/setup-node@v3
+      #  with:
+       #   node-version: '14'
+      - #run: npm install -g bats
+      - #run: bats -v
+
+"""
+name: Notifier
+
+# triggers for notifying
+#  these are some important trigger cases could be change as need
+# check here https://developer.github.com/webhooks/
+on:
+  issue_comment:
+    types: created
+  issues:
+    types: [opened, edited, pinned, closed, reopened, assigned, labeled]
+  pull_request:
+    types: [opened, closed, edited, ready_for_review, review_requested, reopened]
+  pull_request_review_comment:
+    types: created
+  push:
+
+jobs:
+  build:
+    name: Notifier
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Notifier
+      uses: GokulDas027/TelegramBridge@master
+      if: always()
+      with:
+        chat: ${{ secrets.chat }} # save your chat id at settings/secrets with name: chat
+        token: ${{ secrets.token }} # savethe bot token at settings/secrets with name: token
+        status: ${{ job.status }} # don't change
+        event: ${{ github.event_name }} # don't change
+        actor: ${{ github.actor }} # don't change
+"""
+
+name: Configure pyenv and pick the right version
+on: [push, pull_request]
+
+jobs:
+ # python installtion
+  install-python:
+  # should run on linux based operating system
+    runs-on: ubuntu-latest
+  
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install python version
+      # use the pyenv-action version 7
+        uses: gabrielfalcao/pyenv-action@v7
+        with:
+          default: 3.8.6 # pick 3.8.6 verion 
+          command: pip install -U pip  # upgrade pip after installing python
+      
+      - name: create environment
+        run: pyenv local 3.8.6 && python -mvenv .venv386
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt --upgrade pip
+
+
+      - name: setup pyenv
+        id: pyenv_installation
+        uses: "gabrielfalcao/pyenv-action@v7"
+
+      - name: debug pyenv
+        run: echo ${{ steps.pyenv_installation.outputs.pyenv_root }}
+     

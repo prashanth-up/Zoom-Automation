@@ -6,9 +6,6 @@ import pyautogui
 import schedule
 import time
 import os
-#import webbrowser as wb
-#url='https://www.google.com'
-#chrome_path="C:\\Program Files(x86)\\Google\\Chrome\\Application\\chrome.exe"
 
 # To be printed hashes
 hashes = "#" * 95
