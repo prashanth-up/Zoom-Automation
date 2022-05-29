@@ -56,4 +56,4 @@ An Automation script to automatically join a scheduled zoom meeting at a specifi
 - [ ] Replacing the need to always run the file in the background
 
 # Have Fun Lazy People
-_*Drop a ⭐ if you slept peacefully by this*_
+_*Drop a ⭐ if you slept peacefully by this!*_
