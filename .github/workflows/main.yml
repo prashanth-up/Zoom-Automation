@@ -1,7 +1,5 @@
-name:Configure pyenv and pick the right version
-
-on:
-  pull_request:
+name: Configure pyenv and pick the right version
+on: [push, pull_request]
 
 jobs:
  # python installtion
