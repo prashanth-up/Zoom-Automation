@@ -1,4 +1,4 @@
-name: Notifier
+name: Notifier, Configure pyenv and pick the right version
 
 # triggers for notifying
 #  these are some important trigger cases could be change as need
@@ -31,7 +31,6 @@ jobs:
         actor: ${{ github.actor }} # don't change
         
 
-name: Configure pyenv and pick the right version
 on: [push, pull_request]
 
 jobs:
