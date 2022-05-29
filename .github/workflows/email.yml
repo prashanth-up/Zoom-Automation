@@ -38,9 +38,9 @@ jobs:
           # Required mail server port:
           server_port: 465
           # Optional (recommended): mail server username:
-          username: ${{secrets.MAIL_USERNAME}}
+          #username: ${{secrets.MAIL_USERNAME}}
           # Optional (recommended) mail server password:
-          password: ${{secrets.MAIL_PASSWORD}}
+          #password: ${{secrets.MAIL_PASSWORD}}
           # Required mail subject:
           subject: Github Actions job result
           # Required recipients' addresses:
@@ -54,11 +54,11 @@ jobs:
           # Optional HTML body read from file:
           html_body: file://README.html
           # Optional carbon copy recipients:
-          cc: kyloren@example.com,leia@example.com
+          #cc: kyloren@example.com,leia@example.com
           # Optional blind carbon copy recipients:
-          bcc: r2d2@example.com,hansolo@example.com
+          #bcc: r2d2@example.com,hansolo@example.com
           # Optional recipient of the email response:
-          reply_to: luke@example.com
+          #reply_to: luke@example.com
           # Optional Message ID this message is replying to:
           in_reply_to: <random-luke@example.com>
           # Optional unsigned/invalid certificates allowance:
