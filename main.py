@@ -1,5 +1,5 @@
 # Made By Prashanth Umapathy
-# Specialises is Laziness
+# Specializes in Laziness
 
 # Libraries imported
 import pyautogui
